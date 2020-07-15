@@ -13,114 +13,113 @@ let classPos = 0;
 $(()=>  {
 
 const checkForWin = () => {
-  // console.log('win check');
+    // console.log('win check');
 
-// ========================
-// VERTICLE WIN CONDITIONS
-// ========================
+  // ========================
+  // VERTICLE WIN CONDITIONS
+  // ========================
 
-  if ($('#0').attr('class') === 'x' && $('#3').attr('class') === 'x' && $('#6').attr('class') === 'x')  {
+    if ($('#0').attr('class') === 'x' && $('#3').attr('class') === 'x' && $('#6').attr('class') === 'x')  {
+      thatsAWin.push(1)
+      alert('X\'s win!!!')
+      console.log(thatsAWin);
+    }
+    if ($('#0').attr('class') === 'o' && $('#3').attr('class') === 'o' && $('#6').attr('class') === 'o')  {
+      thatsAWin.push(1)
+      alert('O\'s win!!!')
+      console.log(thatsAWin);
+    }
+    if ($('#1').attr('class') === 'x' && $('#4').attr('class') === 'x' && $('#7').attr('class') === 'x')  {
+      thatsAWin.push(1)
+      alert('X\'s win!!!')
+      console.log(thatsAWin);
+
+    }
+    if ($('#1').attr('class') === 'o' && $('#4').attr('class') === 'o' && $('#7').attr('class') === 'o')  {
+      thatsAWin.push(1)
+      alert('O\'s win!!!')
+      console.log(thatsAWin);
+    }
+    if ($('#2').attr('class') === 'x' && $('#5').attr('class') === 'x' && $('#8').attr('class') === 'x')  {
+      thatsAWin.push(1)
+      alert('X\'s win!!!')
+      console.log(thatsAWin);
+    }
+    if ($('#2').attr('class') === 'o' && $('#5').attr('class') === 'o' && $('#8').attr('class') === 'o')  {
+      thatsAWin.push(1)
+      alert('O\'s win!!!')
+      console.log(thatsAWin);
+    }
+
+  // ==========================
+  // HORIZONTIAL WIN CONDITIONS
+  // ==========================
+
+  if ($('#0').attr('class') === 'x' && $('#1').attr('class') === 'x' && $('#2').attr('class') === 'x')  {
     thatsAWin.push(1)
     alert('X\'s win!!!')
     console.log(thatsAWin);
   }
-  if ($('#0').attr('class') === 'o' && $('#3').attr('class') === 'o' && $('#6').attr('class') === 'o')  {
+  if ($('#0').attr('class') === 'o' && $('#1').attr('class') === 'o' && $('#2').attr('class') === 'o')  {
     thatsAWin.push(1)
     alert('O\'s win!!!')
     console.log(thatsAWin);
   }
-  if ($('#1').attr('class') === 'x' && $('#4').attr('class') === 'x' && $('#7').attr('class') === 'x')  {
-    thatsAWin.push(1)
-    alert('X\'s win!!!')
-    console.log(thatsAWin);
-
-  }
-  if ($('#1').attr('class') === 'o' && $('#4').attr('class') === 'o' && $('#7').attr('class') === 'o')  {
-    thatsAWin.push(1)
-    alert('O\'s win!!!')
-    console.log(thatsAWin);
-  }
-  if ($('#2').attr('class') === 'x' && $('#5').attr('class') === 'x' && $('#8').attr('class') === 'x')  {
+  if ($('#3').attr('class') === 'x' && $('#4').attr('class') === 'x' && $('#5').attr('class') === 'x')  {
     thatsAWin.push(1)
     alert('X\'s win!!!')
     console.log(thatsAWin);
   }
-  if ($('#2').attr('class') === 'o' && $('#5').attr('class') === 'o' && $('#8').attr('class') === 'o')  {
+  if ($('#3').attr('class') === 'o' && $('#4').attr('class') === 'o' && $('#5').attr('class') === 'o')  {
+    thatsAWin.push(1)
+    alert('O\'s win!!!')
+    console.log(thatsAWin);
+  }
+  if ($('#6').attr('class') === 'x' && $('#7').attr('class') === 'x' && $('#8').attr('class') === 'x')  {
+    thatsAWin.push(1)
+    alert('X\'s win!!!')
+    console.log(thatsAWin);
+  }
+  if ($('#6').attr('class') === 'o' && $('#7').attr('class') === 'o' && $('#8').attr('class') === 'o')  {
     thatsAWin.push(1)
     alert('O\'s win!!!')
     console.log(thatsAWin);
   }
 
-// ==========================
-// HORIZONTIAL WIN CONDITIONS
-// ==========================
+  // ========================
+  // DIAGONAL WIN CONDITIONS
+  // ========================
 
-if ($('#0').attr('class') === 'x' && $('#1').attr('class') === 'x' && $('#2').attr('class') === 'x')  {
-  thatsAWin.push(1)
-  alert('X\'s win!!!')
-  console.log(thatsAWin);
-}
-if ($('#0').attr('class') === 'o' && $('#1').attr('class') === 'o' && $('#2').attr('class') === 'o')  {
-  thatsAWin.push(1)
-  alert('O\'s win!!!')
-  console.log(thatsAWin);
-}
-if ($('#3').attr('class') === 'x' && $('#4').attr('class') === 'x' && $('#5').attr('class') === 'x')  {
-  thatsAWin.push(1)
-  alert('X\'s win!!!')
-  console.log(thatsAWin);
-}
-if ($('#3').attr('class') === 'o' && $('#4').attr('class') === 'o' && $('#5').attr('class') === 'o')  {
-  thatsAWin.push(1)
-  alert('O\'s win!!!')
-  console.log(thatsAWin);
-}
-if ($('#6').attr('class') === 'x' && $('#7').attr('class') === 'x' && $('#8').attr('class') === 'x')  {
-  thatsAWin.push(1)
-  alert('X\'s win!!!')
-  console.log(thatsAWin);
-}
-if ($('#6').attr('class') === 'o' && $('#7').attr('class') === 'o' && $('#8').attr('class') === 'o')  {
-  thatsAWin.push(1)
-  alert('O\'s win!!!')
-  console.log(thatsAWin);
-}
+  if ($('#0').attr('class') === 'x' && $('#4').attr('class') === 'x' && $('#8').attr('class') === 'x')  {
+    thatsAWin.push(1)
+    alert('X\'s win!!!')
+    console.log(thatsAWin);
+  }
+  if ($('#0').attr('class') === 'o' && $('#4').attr('class') === 'o' && $('#8').attr('class') === 'o')  {
+    thatsAWin.push(1)
+    alert('O\'s win!!!')
+    console.log(thatsAWin);
+  }
+  if ($('#2').attr('class') === 'x' && $('#4').attr('class') === 'x' && $('#6').attr('class') === 'x')  {
+    thatsAWin.push(1)
+    alert('X\'s win!!!')
+    console.log(thatsAWin);
+  }
+  if ($('#2').attr('class') === 'o' && $('#4').attr('class') === 'o' && $('#6').attr('class') === 'o')  {
+    thatsAWin.push(1)
+    alert('O\'s win!!!')
+    console.log(thatsAWin);
+  }
 
-// ========================
-// DIAGONAL WIN CONDITIONS
-// ========================
+  // ==========================
+  // DRAW GAME CONDITION
+  // ==========================
 
-if ($('#0').attr('class') === 'x' && $('#4').attr('class') === 'x' && $('#8').attr('class') === 'x')  {
-  thatsAWin.push(1)
-  alert('X\'s win!!!')
-  console.log(thatsAWin);
-}
-if ($('#0').attr('class') === 'o' && $('#4').attr('class') === 'o' && $('#8').attr('class') === 'o')  {
-  thatsAWin.push(1)
-  alert('O\'s win!!!')
-  console.log(thatsAWin);
-}
-if ($('#2').attr('class') === 'x' && $('#4').attr('class') === 'x' && $('#6').attr('class') === 'x')  {
-  thatsAWin.push(1)
-  alert('X\'s win!!!')
-  console.log(thatsAWin);
-}
-if ($('#2').attr('class') === 'o' && $('#4').attr('class') === 'o' && $('#6').attr('class') === 'o')  {
-  thatsAWin.push(1)
-  alert('O\'s win!!!')
-  console.log(thatsAWin);
-}
-
-// ==========================
-// DRAW GAME CONDITION
-// ==========================
-
- if (checkForTie.length === 9 && thatsAWin.length === 0) {
-  alert('The game is a draw!')
-  console.log(checkForTie);
-  console.log(checkForWin);
-}
-
+   if (checkForTie.length === 9 && thatsAWin.length === 0) {
+    alert('The game is a draw!');
+    console.log(checkForTie);
+    console.log(checkForWin);
+  }
 
 }
 
@@ -143,10 +142,11 @@ const changeType = () => {
 }
 
 const reset = () => {
-  $('div').attr('class', 'square');
+  // $('newSquare').attr('class', 'square');
   classPos = 0;
   checkForTie = [];
-  checkForWin = [];
+  thatsAWin = [];
+  location.reload(true);
 }
 
 

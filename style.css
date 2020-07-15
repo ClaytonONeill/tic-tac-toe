@@ -1,16 +1,30 @@
+#top-contain  {
+  width: 36em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 1em auto;
+  text-align: center;
+  font-family: monospace;
+}
 
 button  {
-  height: 5em;
+  height: 3em;
   width: 7em;
   border-radius: 5px;
   font-family: 'Arial';
   font-weight: bold;
-  margin-left: 38em;
+  margin-top: 2em;
 }
 
 button:hover  {
   background-color: #c3f87b;
   transition: .7s;
+  cursor: pointer;
 }
 
 .winRecord {
@@ -44,6 +58,7 @@ button:hover  {
 .square:hover {
   background-color: rgba(153,50,204, 1);
   transition: .7s;
+  cursor: pointer;
 }
 
 .x  {
@@ -62,4 +77,66 @@ button:hover  {
   background-size: 10em;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* MOBILE STYLING */
+
+
+@media (max-width: 600px) {
+
+  #top-contain  {
+    width: 21em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #gameContainer  {
+    height: 21em;
+    width: 21em;
+    border: 1px solid black;
+    background-color: black;
+    margin: 1em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px 5px 0 5px;
+    box-shadow: 0px 0px 7px red;
+  }
+
+  .square {
+    height: 6.6em;
+    width: 6.6em;
+    border: 1px solid blue;
+    background-color: white;
+  }
+
+  .x  {
+    height: 6.6em;
+    width: 6.6em;
+    border: 1px solid blue;
+    background: url('x.png');
+    background-size: cover;
+  }
+
+  .o  {
+    height: 6.6em;
+    width: 6.6em;
+    border: 1px solid blue;
+    background: url('o.png');
+    background-size: 10em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  button  {
+    height: 3em;
+    width: 10em;
+    border-radius: 5px;
+    font-family: 'Arial';
+    font-weight: bold;
+    margin-top: 2.3em;
+  }
+
 }
